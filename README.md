@@ -1,1 +1,1 @@
-"# UnityWwiseProject" 
+# UnityWwiseProject
