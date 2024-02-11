@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{89D4C189-B55F-4AA1-AF48-A8409A2256E2}" SchemaVersion="110">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{89D4C189-B55F-4AA1-AF48-A8409A2256E2}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{89D4C189-B55F-4AA1-AF48-A8409A2256E2}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Digital-Horror - AMB - Pulsating breathe" ID="{D3C5A17C-2B88-477E-9CEA-AF7058B37B97}" ShortID="977788727">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCBC8A2D-C988-4E22-B0A7-4EC37A699D0F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{541E88D3-7612-487C-9C8B-8E752DEABAA0}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Digital-Horror - AMB - Pulsating breathe" ID="{F3CDB2EC-C7BE-4532-8533-CE10251BD772}">
+							<Language>SFX</Language>
+							<AudioFile>Digital-Horror - AMB - Pulsating breathe.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="608136198"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Digital-Horror - AMB - Pulsating breathe" ID="{F3CDB2EC-C7BE-4532-8533-CE10251BD772}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

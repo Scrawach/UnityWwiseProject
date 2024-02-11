@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{D677A0E1-6B93-4A16-8000-DA3422955549}" SchemaVersion="110">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{D677A0E1-6B93-4A16-8000-DA3422955549}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{D677A0E1-6B93-4A16-8000-DA3422955549}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Digital_Horror___AMB___Pulsating_breathe" ID="{63074727-ACD1-4754-A758-15A77B458B62}">
+					<ChildrenList>
+						<Action Name="" ID="{12E18CA1-1DCD-4E81-99BF-137D4CA527D2}" ShortID="736191054">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Digital-Horror - AMB - Pulsating breathe" ID="{D3C5A17C-2B88-477E-9CEA-AF7058B37B97}" WorkUnitID="{89D4C189-B55F-4AA1-AF48-A8409A2256E2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="WwiseTestProject" GUID="{299A4440-CBF2-4897-A296-980AB594D6E9}" Generator="2022.1.4.8202"/>
+	<CacheRoot>../../../../../Wwise/WwiseTestProject/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Windows" GUID="{A6BA26B1-7266-4495-9405-172F083C32FA}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../../Wwise/WwiseTestProject/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{C90EC53C-7384-4EE1-B33E-7EE6883FFDBF}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{9F036DCF-41A4-15D7-F015-7ACF3B5B1006}</FileHash>
+</ProjectInfo>

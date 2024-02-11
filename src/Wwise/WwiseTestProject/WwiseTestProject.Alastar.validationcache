@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="110">
-	<ValidationCacheItem File="E:\Projects\Unity\UnityWwiseProject\src\Wwise\WwiseTestProject\WwiseTestProject.wproj" DateLow="1707662892" DateHigh="0"/>
+	<ValidationCacheItem File="E:\Projects\Unity\UnityWwiseProject\src\Wwise\WwiseTestProject\WwiseTestProject.wproj" DateLow="1707666309" DateHigh="0"/>
+	<ValidationCacheItem File="E:\Projects\Unity\UnityWwiseProject\src\Wwise\WwiseTestProject\WwiseTestProject.Alastar.wsettings" DateLow="1707663299" DateHigh="0"/>
 	<ValidationCacheItem File="E:\Projects\Unity\UnityWwiseProject\src\Wwise\WwiseTestProject\Virtual Acoustics\Factory Acoustic Textures.wwu" DateLow="1696872828" DateHigh="0"/>
 	<ValidationCacheItem File="E:\Projects\Unity\UnityWwiseProject\src\Wwise\WwiseTestProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1707662892" DateHigh="0"/>
 	<ValidationCacheItem File="E:\Projects\Unity\UnityWwiseProject\src\Wwise\WwiseTestProject\Triggers\Default Work Unit.wwu" DateLow="1707662892" DateHigh="0"/>
