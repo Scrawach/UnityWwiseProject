@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: b9f26c31ce1cbc468bb6257bc8935fce
     GuidInternal: 
-    m_lastTime: -8584939439927731270
+    m_lastTime: -8584936710658373837
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Acoustic Textures.wwu
     PathAndIcons:
@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Factory Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8585047340570690487
+    m_lastTime: -8584936710657763844
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: d3881e5412767c489c8b8e752deabaa0
     GuidInternal: 
-    m_lastTime: -8584939439926541302
+    m_lastTime: -8584936710656733837
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -331,8 +331,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: db1cabf777c5b1479576a457875abea8
     GuidInternal: 
-    m_lastTime: -8584939439925201241
-    List: []
+    m_lastTime: -8584936710657423841
+    List:
+    - name: Main
+      guid: e74e6028dec7d445ad8937f1a08365b3
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: db1cabf777c5b1479576a457875abea8
+      - ElementName: Main
+        ObjectType: 7
+        guid: e74e6028dec7d445ad8937f1a08365b3
+      Path: SoundBanks\Default Work Unit\Main
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -345,8 +359,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e1a077d6936b164a8000da3422955549
     GuidInternal: 
-    m_lastTime: -8584939439926431258
-    List: []
+    m_lastTime: -8584936710656663856
+    List:
+    - name: Play_Digital_Horror___AMB___Pulsating_breathe
+      guid: 27470763d1ac5447a75815a77b458b62
+      id: 1784581504
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e1a077d6936b164a8000da3422955549
+      - ElementName: Play_Digital_Horror___AMB___Pulsating_breathe
+        ObjectType: 3
+        guid: 27470763d1ac5447a75815a77b458b62
+      Path: Events\Default Work Unit\Play_Digital_Horror___AMB___Pulsating_breathe
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -359,7 +390,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: e7bab0e0ad839249b6d268882559ec76
     GuidInternal: 
-    m_lastTime: -8584939439925421290
+    m_lastTime: -8584936710656063848
     List: []
   - PhysicalPath: Game Parameters\Factory Soundseed Air Game Syncs.wwu
     PathAndIcons:
@@ -372,7 +403,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Factory Soundseed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8585047340392499141
+    m_lastTime: -8584936710655993842
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -526,7 +557,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 4b7689af96cc424cb201b2bb143af06f
     GuidInternal: 
-    m_lastTime: -8584939439926001296
+    m_lastTime: -8584936710655793828
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -540,7 +571,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 60e1a8784b0bf94ba9c1e5d0080b93f0
     GuidInternal: 
-    m_lastTime: -8584939439925641298
+    m_lastTime: -8584936710656303836
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -554,10 +585,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 6cd1bdcc0f7f654c9a672e8a684fb8ef
     GuidInternal: 
-    m_lastTime: -8584939439925531267
+    m_lastTime: -8584936710658053851
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0600000007000000
+  ExpandedWaapiItemIds: 0500000006000000070000000a0000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

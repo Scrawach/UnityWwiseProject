@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<RootPaths>
 		<ProjectRoot>../..</ProjectRoot>
 		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{66834572-B8EA-99A4-7528-A01A4873C5C2}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{AB9F0343-CD85-AB9E-58D8-B63D74A50185}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -40,6 +40,7 @@
 						<Property Name="AbsorptionMidLow" Type="Real32" Value="18"/>
 						<Property Name="AbsorptionMidHigh" Type="Real32" Value="23"/>
 						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
 					</Properties>
 				</AcousticTexture>
 				<AcousticTexture Id="513139656" Name="Mountain">
@@ -48,6 +49,7 @@
 						<Property Name="AbsorptionMidLow" Type="Real32" Value="0"/>
 						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
 						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
 					</Properties>
 				</AcousticTexture>
 				<AcousticTexture Id="841620460" Name="Concrete">
@@ -56,6 +58,7 @@
 						<Property Name="AbsorptionMidLow" Type="Real32" Value="6"/>
 						<Property Name="AbsorptionMidHigh" Type="Real32" Value="6"/>
 						<Property Name="AbsorptionHigh" Type="Real32" Value="14"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
 					</Properties>
 				</AcousticTexture>
 				<AcousticTexture Id="1755085759" Name="Wood_Deep">
@@ -64,6 +67,7 @@
 						<Property Name="AbsorptionMidLow" Type="Real32" Value="8"/>
 						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
 						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
 					</Properties>
 				</AcousticTexture>
 				<AcousticTexture Id="1873957695" Name="Anechoic">
@@ -72,6 +76,7 @@
 						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
 						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
 						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
 					</Properties>
 				</AcousticTexture>
 				<AcousticTexture Id="1970351858" Name="Fabric">
@@ -80,6 +85,7 @@
 						<Property Name="AbsorptionMidLow" Type="Real32" Value="13"/>
 						<Property Name="AbsorptionMidHigh" Type="Real32" Value="48"/>
 						<Property Name="AbsorptionHigh" Type="Real32" Value="72"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
 					</Properties>
 				</AcousticTexture>
 				<AcousticTexture Id="2058049674" Name="Wood">
@@ -88,6 +94,7 @@
 						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
 						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
 						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
 					</Properties>
 				</AcousticTexture>
 				<AcousticTexture Id="2412606308" Name="Carpet">
@@ -96,6 +103,7 @@
 						<Property Name="AbsorptionMidLow" Type="Real32" Value="45"/>
 						<Property Name="AbsorptionMidHigh" Type="Real32" Value="76"/>
 						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
 					</Properties>
 				</AcousticTexture>
 				<AcousticTexture Id="2637588553" Name="Tile">
@@ -104,6 +112,7 @@
 						<Property Name="AbsorptionMidLow" Type="Real32" Value="41"/>
 						<Property Name="AbsorptionMidHigh" Type="Real32" Value="12"/>
 						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
 					</Properties>
 				</AcousticTexture>
 				<AcousticTexture Id="2928161104" Name="Curtains">
@@ -112,6 +121,7 @@
 						<Property Name="AbsorptionMidLow" Type="Real32" Value="60"/>
 						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
 						<Property Name="AbsorptionHigh" Type="Real32" Value="84"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
 					</Properties>
 				</AcousticTexture>
 				<AcousticTexture Id="3195498748" Name="Cork_Tiles">
@@ -120,6 +130,7 @@
 						<Property Name="AbsorptionMidLow" Type="Real32" Value="30"/>
 						<Property Name="AbsorptionMidHigh" Type="Real32" Value="73"/>
 						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
 					</Properties>
 				</AcousticTexture>
 				<AcousticTexture Id="3670307564" Name="Drywall">
@@ -128,6 +139,7 @@
 						<Property Name="AbsorptionMidLow" Type="Real32" Value="2"/>
 						<Property Name="AbsorptionMidHigh" Type="Real32" Value="2"/>
 						<Property Name="AbsorptionHigh" Type="Real32" Value="2"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
 					</Properties>
 				</AcousticTexture>
 				<AcousticTexture Id="4168643977" Name="Acoustic_Banner">
@@ -136,6 +148,7 @@
 						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
 						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
 						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
 					</Properties>
 				</AcousticTexture>
 				<AcousticTexture Id="4262522749" Name="Wood_Bright">
@@ -144,14 +157,15 @@
 						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
 						<Property Name="AbsorptionMidHigh" Type="Real32" Value="10"/>
 						<Property Name="AbsorptionHigh" Type="Real32" Value="9"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
 					</Properties>
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8AEC33FC-6739-438E-5300-619C2A1F839D}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3B51E889-948F-7EDA-A1E8-111109B087A1}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{18F2C13F-905B-27E7-20B5-FCD08D255170}</FileHash>
+	<FileHash>{AE1A43BC-86AA-7EE2-E9B5-09F23FCB035D}</FileHash>
 </SoundBanksInfo>
