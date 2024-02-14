@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace CodeBase
@@ -7,16 +8,39 @@ namespace CodeBase
     {
         public AK.Wwise.Event Event;
 
-        private void Start()
+        private async void Start()
         {
             Debug.Log($"Start...");
-            AkBankManager.LoadBankAsync("Main", OnBankCallback);
+            var result = await LoadBankAsync("Main");
+            Debug.Log($"Bank loaded {result.Result}");
+            Event.Post(gameObject);
         }
 
-        private void OnBankCallback(uint in_bankid, IntPtr in_inmemorybankptr, AKRESULT in_eloadresult, object in_cookie)
+        private static Task<BankResult> LoadBankAsync(string bank) =>
+            Task.Run(() =>
+            {
+                var task = new TaskCompletionSource<BankResult>();
+                
+                AkBankManager.LoadBankAsync(bank, (bankId, pointer, result, cookie) => 
+                    task.TrySetResult(new BankResult(bankId, pointer, result, cookie)));
+                
+                return task.Task;
+            });
+
+        public class BankResult
         {
-            Debug.Log($"bankId: {in_bankid}; result: {in_eloadresult}");
-            Event.Post(gameObject);
+            public uint BankId;
+            public IntPtr InMemoryBankPtr;
+            public AKRESULT Result;
+            public object Cookie;
+
+            public BankResult(uint bankId, IntPtr inMemoryBankPtr, AKRESULT result, object cookie)
+            {
+                BankId = bankId;
+                InMemoryBankPtr = inMemoryBankPtr;
+                Result = result;
+                Cookie = cookie;
+            }
         }
     }
 }
