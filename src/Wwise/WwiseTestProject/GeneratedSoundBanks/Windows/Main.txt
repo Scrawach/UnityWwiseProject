@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1784581504	Play_Digital_Horror___AMB___Pulsating_breathe			\Default Work Unit\Play_Digital_Horror___AMB___Pulsating_breathe	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	608136198	Digital-Horror - AMB - Pulsating breathe	E:\Projects\Unity\UnityWwiseProject\src\Wwise\WwiseTestProject\.cache\Windows\SFX\Digital-Horror - AMB - Pulsating breathe_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Digital-Horror - AMB - Pulsating breathe		18940516
+
