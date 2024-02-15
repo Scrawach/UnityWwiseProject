@@ -12,7 +12,7 @@ namespace CodeBase
         {
             Debug.Log($"Start...");
             var result = await LoadBankAsync("Main");
-            Debug.Log($"Bank loaded {result.Result}");
+            Debug.Log($"Bank loaded {result.Result}, {Event.ObjectReference.Guid}");
             Event.Post(gameObject);
         }
 
