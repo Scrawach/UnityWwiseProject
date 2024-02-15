@@ -19,7 +19,7 @@ namespace CodeBase
         private static Task<AsyncLoadingBankResult> LoadBankAsync(string bank) =>
             Task.Run(() =>
             {
-                var task = new TaskCompletionSource<BankResult>();
+                var task = new TaskCompletionSource<AsyncLoadingBankResult>();
                 
                 AkBankManager.LoadBankAsync(bank, (bankId, pointer, result, cookie) => 
                     task.TrySetResult(new AsyncLoadingBankResult(bankId, pointer, result, cookie)));
