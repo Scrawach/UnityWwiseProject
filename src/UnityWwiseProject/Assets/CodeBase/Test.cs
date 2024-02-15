@@ -16,18 +16,18 @@ namespace CodeBase
             Event.Post(gameObject);
         }
 
-        private static Task<BankResult> LoadBankAsync(string bank) =>
+        private static Task<AsyncLoadingBankResult> LoadBankAsync(string bank) =>
             Task.Run(() =>
             {
                 var task = new TaskCompletionSource<BankResult>();
                 
                 AkBankManager.LoadBankAsync(bank, (bankId, pointer, result, cookie) => 
-                    task.TrySetResult(new BankResult(bankId, pointer, result, cookie)));
+                    task.TrySetResult(new AsyncLoadingBankResult(bankId, pointer, result, cookie)));
                 
                 return task.Task;
             });
 
-        public class BankResult
+        public class AsyncLoadingBankResult
         {
             public uint BankId;
             public IntPtr InMemoryBankPtr;
