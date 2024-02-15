@@ -34,7 +34,7 @@ namespace CodeBase
             public AKRESULT Result;
             public object Cookie;
 
-            public BankResult(uint bankId, IntPtr inMemoryBankPtr, AKRESULT result, object cookie)
+            public AsyncLoadingBankResult(uint bankId, IntPtr inMemoryBankPtr, AKRESULT result, object cookie)
             {
                 BankId = bankId;
                 InMemoryBankPtr = inMemoryBankPtr;
