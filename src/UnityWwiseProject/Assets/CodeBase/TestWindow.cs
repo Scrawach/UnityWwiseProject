@@ -55,7 +55,8 @@ namespace CodeBase
 
         private async void Play(Event sound)
         {
-            var akInitializers = FindObjectsByType<AkInitializer>(FindObjectsSortMode.None).First();
+            //var akInitializers = FindObjectsByType<AkInitializer>(FindObjectsSortMode.None).First();
+            var akInitializers = Resources.Load<AkInitializer>("WwiseGlobal");
             AkSoundEngineController.Instance.Init(akInitializers);
             AkSoundEngine.StopAll(akInitializers.gameObject);
 

@@ -376,8 +376,8 @@ MonoBehaviour:
         guid: 27470763d1ac5447a75815a77b458b62
       Path: Events\Default Work Unit\Play_Digital_Horror___AMB___Pulsating_breathe
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 98.64802
+      minDuration: 98.64802
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
