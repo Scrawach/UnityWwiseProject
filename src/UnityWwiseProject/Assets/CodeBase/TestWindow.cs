@@ -1,4 +1,7 @@
-﻿using UnityEditor;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -9,7 +12,9 @@ namespace CodeBase
     public class TestWindow : EditorWindow
     {
         public AK.Wwise.Event _event = null;
-        
+
+        private static List<AkBankManagerAsync.AsyncLoadingBankResult> _banks = new();
+
         private void CreateGUI()
         {
             DrawInspector();
@@ -28,22 +33,46 @@ namespace CodeBase
             {
                 text = "Play"
             };
+            
+            var pauseButton = new Button(OnPauseButtonClicked)
+            {
+                text = "Play"
+            };
             root.Add(button);
+            root.Add(pauseButton);
         }
 
-        private void OnButtonClicked() =>
-            AkWaapiUtilities.TogglePlayEvent(WwiseObjectType.Event, _event.WwiseObjectReference.Guid);
+        private void OnPauseButtonClicked()
+        {
+            AkSoundEngine.StopAll();
+        }
+
+        private void OnButtonClicked()
+        {
+            Play(_event);
+            //AkWaapiUtilities.TogglePlayEvent(WwiseObjectType.Event, _event.WwiseObjectReference.Guid);
+        }
 
         private async void Play(Event sound)
         {
-            var global = Resources.Load<AkInitializer>("WwiseGlobal");
-            var instantiate = GameObject.Instantiate(global);
-            AkSoundEngineController.Instance.Init(instantiate);
-            Debug.Log($"{global}");
-            var result = await AkBankManagerAsync.LoadBankAsync("Main");
-            Debug.Log($"Result {result.Result}");
-            _event.Post(instantiate.gameObject);
-            Debug.Log($"POST");
+            var akInitializers = FindObjectsByType<AkInitializer>(FindObjectsSortMode.None).First();
+            AkSoundEngineController.Instance.Init(akInitializers);
+            AkSoundEngine.StopAll(akInitializers.gameObject);
+
+            if (!IsBankLoaded("Main")) 
+                await LoadBank("Main");
+
+            _event.Post(akInitializers.gameObject);
         }
+
+        private async Task LoadBank(string bankName)
+        {
+            var result = await AkBankManagerAsync.LoadBankAsync(bankName);
+            _banks.Add(result);
+            Debug.Log($"Load bank {bankName} with result {result.Result}");
+        }
+
+        private bool IsBankLoaded(string bankName) =>
+            _banks.Any(bank => bank.Name == bankName);
     }
 }
