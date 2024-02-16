@@ -31,11 +31,8 @@ namespace CodeBase
             root.Add(button);
         }
 
-        private void OnButtonClicked()
-        {
-            Play(_event);
-            //AkWaapiUtilities.TogglePlayEvent(WwiseObjectType.Event, _event.WwiseObjectReference.Guid);
-        }
+        private void OnButtonClicked() =>
+            AkWaapiUtilities.TogglePlayEvent(WwiseObjectType.Event, _event.WwiseObjectReference.Guid);
 
         private async void Play(Event sound)
         {
