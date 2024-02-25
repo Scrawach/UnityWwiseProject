@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UnityEditor;
@@ -18,9 +19,35 @@ namespace CodeBase
 
         private static List<AkBankManagerAsync.AsyncLoadingBankResult> _banks = new();
 
+        private static uint _playingId;
+
         private void CreateGUI()
         {
             DrawInspector();
+        }
+
+        private void Update()
+        {
+            if (_playingId != 0)
+            { 
+                PrintDuration(_playingId);
+                return;
+                var segmentInfo = new AkSegmentInfo();
+                var result = AkSoundEngine.GetPlayingSegmentInfo(_playingId, segmentInfo, true);
+                Debug.Log($"id = {_playingId}, result: {result}, {segmentInfo}");
+
+                var result2 = AkSoundEngine.GetSourcePlayPosition(_playingId, out var pos);
+                Debug.Log($"{result2}, {pos}");
+            }
+        }
+
+        private void PrintDuration(uint playingId)
+        {
+            var data = AkWwiseProjectInfo.GetData().GetEventInfo(EventId);
+            var result = AkSoundEngine.GetSourcePlayPosition(playingId, out var playPosition);
+            var playPositionInSeconds = playPosition / 1000f;
+            var progress = playPositionInSeconds / data.maxDuration;
+            Debug.Log($"{result}: {progress}");
         }
 
         private void DrawInspector()
@@ -68,9 +95,22 @@ namespace CodeBase
 
             //Debug.Log($"Post {sound.Name}");
             //_event.Post(akInitializers.gameObject);
-            AkSoundEngine.PostEvent(EventId, akInitializers.gameObject);
-            AkSoundEngine.UnregisterGameObj(akInitializers.gameObject);
+            var flags = (uint)AkCallbackType.AK_MusicSyncAll 
+                        | (uint)AkCallbackType.AK_EnableGetMusicPlayPosition 
+                        | (uint)AkCallbackType.AK_EnableGetSourcePlayPosition
+                        | (uint)AkCallbackType.AK_EnableGetSourceStreamBuffering 
+                        | (uint)AkCallbackType.AK_CallbackBits;
+            Debug.Log($"{flags}");
+            
+            _playingId = AkSoundEngine.PostEvent(EventId, akInitializers.gameObject, flags, OnCallback, null);
+
+            //AkSoundEngine.UnregisterGameObj(akInitializers.gameObject);
             //AkSoundEngine.PostEvent(sound.Name, akInitializers.gameObject);
+        }
+
+        private void OnCallback(object in_cookie, AkCallbackType in_type, AkCallbackInfo in_info)
+        {
+            Debug.Log($"Callback: {in_info.gameObjID}");
         }
 
         private async Task LoadBank(string bankName)
