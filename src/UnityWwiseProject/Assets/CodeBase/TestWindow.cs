@@ -13,6 +13,9 @@ namespace CodeBase
     {
         public AK.Wwise.Event _event = null;
 
+        private const string EventGuid = "63074727-ACD1-4754-A758-15A77B458B62";
+        private const uint EventId = 1784581504;
+
         private static List<AkBankManagerAsync.AsyncLoadingBankResult> _banks = new();
 
         private void CreateGUI()
@@ -58,12 +61,16 @@ namespace CodeBase
             //var akInitializers = FindObjectsByType<AkInitializer>(FindObjectsSortMode.None).First();
             var akInitializers = Resources.Load<AkInitializer>("WwiseGlobal");
             AkSoundEngineController.Instance.Init(akInitializers);
-            AkSoundEngine.StopAll(akInitializers.gameObject);
-
+            //AkSoundEngine.StopAll(akInitializers.gameObject);
+            AkSoundEngine.RegisterGameObj(akInitializers.gameObject);
             if (!IsBankLoaded("Main")) 
                 await LoadBank("Main");
 
-            _event.Post(akInitializers.gameObject);
+            //Debug.Log($"Post {sound.Name}");
+            //_event.Post(akInitializers.gameObject);
+            AkSoundEngine.PostEvent(EventId, akInitializers.gameObject);
+            AkSoundEngine.UnregisterGameObj(akInitializers.gameObject);
+            //AkSoundEngine.PostEvent(sound.Name, akInitializers.gameObject);
         }
 
         private async Task LoadBank(string bankName)

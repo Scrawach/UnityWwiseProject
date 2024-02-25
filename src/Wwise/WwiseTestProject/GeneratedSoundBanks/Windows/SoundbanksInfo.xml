@@ -162,23 +162,10 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{27EA3A59-9777-CBDE-4420-ECA7521E052A}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3B51E889-948F-7EDA-A1E8-111109B087A1}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
-			<Media>
-				<File Id="608136198" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Digital-Horror - AMB - Pulsating breathe.wav</ShortName>
-					<CachePath>SFX/Digital-Horror - AMB - Pulsating breathe_818F3B66.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="1784581504" Name="Play_Digital_Horror___AMB___Pulsating_breathe" DurationType="OneShot" DurationMin="98.64802" DurationMax="98.64802">
-					<MediaRefs>
-						<MediaRef Id="608136198"/>
-					</MediaRefs>
-				</Event>
-			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F17FBF8F-9EF8-39B8-2568-0CA5A5057FB6}</FileHash>
+	<FileHash>{AE1A43BC-86AA-7EE2-E9B5-09F23FCB035D}</FileHash>
 </SoundBanksInfo>
