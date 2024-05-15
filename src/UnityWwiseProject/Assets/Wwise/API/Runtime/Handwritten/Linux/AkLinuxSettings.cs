@@ -15,7 +15,7 @@ in a written agreement between you and Audiokinetic Inc.
 Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
-﻿#if UNITY_STANDALONE_LINUX && !UNITY_EDITOR
+#if UNITY_EDITOR || (UNITY_STANDALONE_LINUX && !UNITY_EDITOR)
 public partial class AkCommonUserSettings
 {
 	partial void SetSampleRate(AkPlatformInitSettings settings)
