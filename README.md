@@ -1,5 +1,5 @@
 > [!WARNING]  
-> Work in progress. Right now it's a raw prototype.
+> Work in progress. Right now it's a raw prototype. After all, it will be transformed into a unitypackage or something like that.
 
 A simple tool for play Wwise sounds in an editor.
 
