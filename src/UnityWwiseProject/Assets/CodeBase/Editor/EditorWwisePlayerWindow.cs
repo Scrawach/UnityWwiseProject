@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UnityEditor;
@@ -8,9 +7,9 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Event = AK.Wwise.Event;
 
-namespace CodeBase
+namespace CodeBase.Editor
 {
-    public class TestWindow : EditorWindow
+    public class EditorWwisePlayerWindow : EditorWindow
     {
         public AK.Wwise.Event _event = null;
 
@@ -31,13 +30,6 @@ namespace CodeBase
             if (_playingId != 0)
             { 
                 PrintDuration(_playingId);
-                return;
-                var segmentInfo = new AkSegmentInfo();
-                var result = AkSoundEngine.GetPlayingSegmentInfo(_playingId, segmentInfo, true);
-                Debug.Log($"id = {_playingId}, result: {result}, {segmentInfo}");
-
-                var result2 = AkSoundEngine.GetSourcePlayPosition(_playingId, out var pos);
-                Debug.Log($"{result2}, {pos}");
             }
         }
 
