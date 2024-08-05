@@ -72,21 +72,16 @@ namespace CodeBase.Editor
         private void OnButtonClicked()
         {
             Play(_event);
-            //AkWaapiUtilities.TogglePlayEvent(WwiseObjectType.Event, _event.WwiseObjectReference.Guid);
         }
 
         private async void Play(Event sound)
         {
-            //var akInitializers = FindObjectsByType<AkInitializer>(FindObjectsSortMode.None).First();
             var akInitializers = Resources.Load<AkInitializer>("WwiseGlobal");
             AkSoundEngineController.Instance.Init(akInitializers);
-            //AkSoundEngine.StopAll(akInitializers.gameObject);
             AkSoundEngine.RegisterGameObj(akInitializers.gameObject);
             if (!IsBankLoaded("Main")) 
                 await LoadBank("Main");
 
-            //Debug.Log($"Post {sound.Name}");
-            //_event.Post(akInitializers.gameObject);
             var flags = (uint)AkCallbackType.AK_MusicSyncAll 
                         | (uint)AkCallbackType.AK_EnableGetMusicPlayPosition 
                         | (uint)AkCallbackType.AK_EnableGetSourcePlayPosition
@@ -95,9 +90,6 @@ namespace CodeBase.Editor
             Debug.Log($"{flags}");
             
             _playingId = AkSoundEngine.PostEvent(EventId, akInitializers.gameObject, flags, OnCallback, null);
-
-            //AkSoundEngine.UnregisterGameObj(akInitializers.gameObject);
-            //AkSoundEngine.PostEvent(sound.Name, akInitializers.gameObject);
         }
 
         private void OnCallback(object in_cookie, AkCallbackType in_type, AkCallbackInfo in_info)
