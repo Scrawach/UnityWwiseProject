@@ -15,7 +15,7 @@ in a written agreement between you and Audiokinetic Inc.
 Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
-#if UNITY_EDITOR || (UNITY_STANDALONE_LINUX && !UNITY_EDITOR)
+#if UNITY_EDITOR_LINUX || (UNITY_STANDALONE_LINUX && !UNITY_EDITOR)
 public partial class AkBasePathGetter
 {
 	static string DefaultPlatformName = "Linux";
