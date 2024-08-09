@@ -42,26 +42,20 @@ namespace CodeBase.Editor
             Debug.Log($"{result}: {progress}");
         }
 
-        private void DrawInspector()
-        {
-            var root = rootVisualElement;
-            var temp = new SerializedObject(this);
-            var property = temp.FindProperty("_event");
-            var propertyField = new PropertyField(property);
-            propertyField.Bind(temp);
-            root.Add(propertyField);
+        private void DrawInspector() => 
+            rootVisualElement.Add(UserButtons());
 
-            var button = new Button(OnButtonClicked)
-            {
-                text = "Play"
-            };
+        private VisualElement UserButtons()
+        {
+            var elements = new VisualElement();
+
+            var playButton = new Button(OnButtonClicked) { text = "Play" };
+            var stopButton = new Button(OnPauseButtonClicked) { text = "Stop" };
             
-            var pauseButton = new Button(OnPauseButtonClicked)
-            {
-                text = "Play"
-            };
-            root.Add(button);
-            root.Add(pauseButton);
+            elements.Add(playButton);
+            elements.Add(stopButton);
+
+            return elements;
         }
 
         private void OnPauseButtonClicked()
