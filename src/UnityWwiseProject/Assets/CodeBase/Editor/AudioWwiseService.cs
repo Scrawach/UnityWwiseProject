@@ -36,7 +36,7 @@ namespace CodeBase.Editor
             var result = AkSoundEngine.GetSourcePlayPosition(playingId, out var playPosition);
             var playPositionInSeconds = playPosition / 1000f;
 
-            if (data == null)
+            if (result == AKRESULT.AK_PlayingIDNotFound)
                 return 0f;
             
             return playPositionInSeconds / data.maxDuration;
