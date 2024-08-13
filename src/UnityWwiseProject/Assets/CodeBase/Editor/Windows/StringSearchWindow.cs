@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-namespace CodeBase.Editor.Controls
+namespace CodeBase.Editor.Windows
 {
     public class StringSearchWindow : ScriptableObject, ISearchWindowProvider
     {
