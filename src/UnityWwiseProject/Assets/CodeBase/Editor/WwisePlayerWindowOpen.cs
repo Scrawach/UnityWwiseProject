@@ -2,10 +2,10 @@
 
 namespace CodeBase.Editor
 {
-    public static class EditorWwisePlayerWindowOpen
+    public static class WwisePlayerWindowOpen
     {
         [MenuItem("Wwise/Open Editor Player")]
         public static void OpenWindow() =>
-            EditorWindow.GetWindow<EditorWwisePlayerWindow>(nameof(EditorWwisePlayerWindow));
+            EditorWindow.GetWindow<WwisePlayerWindow>(nameof(WwisePlayerWindow));
     }
 }

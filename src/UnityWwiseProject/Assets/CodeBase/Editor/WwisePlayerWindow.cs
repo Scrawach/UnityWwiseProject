@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 namespace CodeBase.Editor
 {
-    public class EditorWwisePlayerWindow : EditorWindow
+    public class WwisePlayerWindow : EditorWindow
     {
         private AudioWwiseService _wwiseSerice = new();
         private uint _playingId;
