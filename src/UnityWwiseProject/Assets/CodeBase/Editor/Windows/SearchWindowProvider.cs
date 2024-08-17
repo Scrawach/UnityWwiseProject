@@ -1,12 +1,12 @@
 using System;
 using System.Linq;
-using CodeBase.Editor.Windows;
+using CodeBase.Editor.Services;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace CodeBase.Editor.Controls
+namespace CodeBase.Editor.Windows
 {
     public class SearchWindowProvider : IDisposable
     {

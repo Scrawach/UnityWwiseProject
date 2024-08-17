@@ -1,8 +1,9 @@
-﻿using UnityEditor;
+﻿using CodeBase.Editor.Services;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace CodeBase.Editor
+namespace CodeBase.Editor.Windows
 {
     public class WwisePlayerWindow : EditorWindow
     {

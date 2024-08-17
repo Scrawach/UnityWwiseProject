@@ -1,7 +1,7 @@
-using CodeBase.Editor.Controls;
+using CodeBase.Editor.Services;
 using UnityEngine.UIElements;
 
-namespace CodeBase.Editor
+namespace CodeBase.Editor.Windows
 {
     public class WwisePlayerRoot : VisualElement
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace CodeBase.Editor
+namespace CodeBase.Editor.Services
 {
     public static class AkBankManagerAsync
     {

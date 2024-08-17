@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using CodeBase.Editor.Windows;
+using UnityEditor;
 
 namespace CodeBase.Editor
 {

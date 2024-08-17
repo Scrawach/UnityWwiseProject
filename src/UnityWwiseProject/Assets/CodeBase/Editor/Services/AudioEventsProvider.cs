@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CodeBase.Editor.Controls
+namespace CodeBase.Editor.Services
 {
     public class AudioEventsProvider
     {

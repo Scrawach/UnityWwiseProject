@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace CodeBase.Editor
+namespace CodeBase.Editor.Services
 {
     public class AudioWwiseService
     {
