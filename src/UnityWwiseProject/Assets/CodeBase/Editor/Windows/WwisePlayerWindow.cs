@@ -7,11 +7,11 @@ namespace CodeBase.Editor.Windows
 {
     public class WwisePlayerWindow : EditorWindow
     {
-        private WwisePlayerRoot _root;
+        private WwisePlayer _root;
         
         private void CreateGUI()
         {
-            _root = new WwisePlayerRoot(this);
+            _root = new WwisePlayer(this);
             _root.Initialize();
         }
 

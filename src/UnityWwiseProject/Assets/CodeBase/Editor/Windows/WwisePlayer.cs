@@ -4,14 +4,14 @@ using UnityEngine.UIElements;
 
 namespace CodeBase.Editor.Windows
 {
-    public class WwisePlayerRoot : VisualElement
+    public class WwisePlayer : VisualElement
     {
         private readonly WwisePlayerWindow _parent;
         private readonly AudioWwiseService _wwiseService;
 
         private uint _playingId;
 
-        public WwisePlayerRoot(WwisePlayerWindow parent)
+        public WwisePlayer(WwisePlayerWindow parent)
         {
             _parent = parent;
             var eventsProvider = new AudioEventsProvider();
